@@ -1,0 +1,19 @@
+{
+  "name": "css-and-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.79.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
