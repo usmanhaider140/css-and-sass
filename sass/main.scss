@@ -1,98 +1,49 @@
-body {
-  font-family: sans-serif;
-}
-
 * {
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
-$color-primary: #f9ed69; // yellow color
-$color-secondary: #f08a5d; // orange
-$color-tertiary: #b83b5e; // pink
-$color-text-dark: #333;
-$color-text-light: #eee;
-$color-white: #fff;
-$width-button: 150px;
-
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.container {
+  background-color: #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* main direction will be upward*/
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  flex-wrap: wrap;
+  //align-content: center;
 }
 
-@mixin style-link-text($color) {
-  text-align: center;
-  text-decoration: none;
-  color: $color;
-  text-transform: capitalize;
-}
-
-@function divide($a, $b) {
-  @return $a / $b;
-}
-
-nav {
-  margin: divide(60, 2) * 1px; // 30px
-  padding: 10px;
-  background-color: $color-primary;
-  @include clearfix;
-}
+.items {
+  background-color: #f1425d;
+  padding: 16px;
+  //margin: 8px;
+  color: white;
+  font-size: 2rem;
+  //flex-basis: auto;
+  //flex-grow: 1;
 
 
-.navigation {
-  list-style: none;
-  float: left;
-
-  li {
-    display: inline-block;
-    padding: 10px 0;
-    margin-left: 30px;
-
-    &:first-child {
-      margin: 0
-    }
-
-    a:link {
-      @include style-link-text($color-text-dark);
-    }
-
-  }
-}
-
-.button {
-  float: right;
-}
-
-%btn-placeholder {
-  padding: 10px;
-  display: inline-block;
-  width: $width-button;
-  border-radius: 100px;
-
-  @include style-link-text($color-text-light);
-}
-
-.btn-main {
-  &:link {
-    @extend %btn-placeholder;
-    background-color: $color-secondary;
+  &:nth-child(2) {
+    background-color: yellowgreen;
+    height: 200px;
+    //order: 1;
+    //flex: 1;
+    //flex-grow: 0;
+    //flex-shrink: 1;
+    //flex-basis: 300px;
+    //flex: 0 1 300px;
   }
 
-  &:hover {
-    background-color: darken($color-secondary, 5%)
-  }
-}
-
-.btn-hot {
-  &:link {
-    @extend %btn-placeholder;
-    background-color: $color-tertiary;
-  }
-
-  &:hover {
-    background-color: darken($color-tertiary, 10%)
+  &:nth-child(4) {
+    background-color: blue;
+    //font-size: 10rem;
+    //align-self: stretch;
+    //order: -1;
+    height: 100px;
+    flex-basis: 20%;
+    //flex-grow: 2;
   }
 }
